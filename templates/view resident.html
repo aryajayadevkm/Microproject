@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <title>Payment page</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
+
+	
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    
+   
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/common.js') }}"></script>
+	<script type="text/javascript" src="{{url_for('static', filename='plugins/daterangepicker/moment.min.js') }}"></script>	
+	<script type="text/javascript" src="{{url_for('static', filename='plugins/daterangepicker/script.js') }}"</script>	
+</head>
+<body>
+
+	<div class="main_content" >
+		<script src="js/nav.js"></script>
+	</div>	
+		<!-- END HEADER -->
+		
+		<!-- START CONTENT -->
+		<div class="main_mid" >		
+		
+			<div class="page">
+				<div class="page_top">
+					<h1>View Resident</h1>
+					<div class="btns" >
+						<a href="residents list.html" >Back</a>
+					</div>
+					<div class="clearfix" ></div>
+				</div>
+
+				<div class="page_cont">
+					<div class="ViewFrm" >
+						<div class="row">
+								<div class="col-md-4">
+									<div class="frmRow">
+										<div class="title" >Basic Details</div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >Name</div>
+										<div class="val" ></div>
+										<div class="clearfix" ></div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >Emp. No</div>
+										<div class="val" >EMP101</div>
+										<div class="clearfix" ></div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >Name</div>
+										<div class="val" >John</div>
+										<div class="clearfix" ></div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >Gender</div>
+										<div class="val" >Male</div>
+										<div class="clearfix" ></div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >DOB</div>
+										<div class="val" >10 Mar, 1999</div>
+										<div class="clearfix" ></div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >Designation</div>
+										<div class="val" >MD</div>
+										<div class="clearfix" ></div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >Active</div>
+										<div class="val" >Yes</div>
+										<div class="clearfix" ></div>
+									</div>
+								</div>
+								
+								<div class="col-md-4">
+									<div class="frmRow">
+										<div class="title" >Communication Address</div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >Address</div>
+										<div class="val" >#101, Rose Mahal, SN Street, Mumbai</div>
+										<div class="clearfix" ></div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >Pincode</div>
+										<div class="val" >620011</div>
+										<div class="clearfix" ></div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >Phone No.</div>
+										<div class="val" >9898989898</div>
+										<div class="clearfix" ></div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >Email</div>
+										<div class="val" >test1@gmail.com</div>
+										<div class="clearfix" ></div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="frmRow">
+										<div class="title" >Login Details</div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >Username</div>
+										<div class="val" >xxxxx</div>
+										<div class="clearfix" ></div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >Password</div>
+										<div class="val" >******</div>
+										<div class="clearfix" ></div>
+									</div>
+								</div>
+							</div>
+					</div>
+
+					<script type="text/javascript" >
+						form_validation('frm_add_edit');
+						$(document).ready(function(){
+							$('#frm_dob').datepicker({
+								changeMonth: true,
+								changeYear: true,
+								maxDate: 'today',
+								dateFormat: 'dd/mm/yy'
+							});
+						});
+					</script>
+				</div>
+			</div>
+
+		</div>
+		<!-- END CONTENT -->
+		
+	<!-- START FOOTER -->
+	<div class="clearfix" ></div>
+</div>
+<div class="clearfix" ></div>
+<div class="main_footer">
+	<div class="copy" >
+		<p>Copyright &copy; 2019 Company Name</p>
+	</div>
+</div>
+</body>
+</html>
+<!-- END FOOTER -->

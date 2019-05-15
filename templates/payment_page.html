@@ -1,0 +1,232 @@
+<!-- START HEADER -->
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <title>Payment page</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
+
+	
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    
+   
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/common.js') }}"></script>
+	<script type="text/javascript" src="{{url_for('static', filename='plugins/daterangepicker/moment.min.js') }}"></script>	
+	<script type="text/javascript" src="{{url_for('static', filename='plugins/daterangepicker/script.js') }}"</script>	
+	
+	
+</head>
+<body>
+	
+	<div class="main_content" >
+		<script src="{{url_for('static', filename='js/nav.js')}}"></script>
+	</div>
+		<!-- END HEADER -->
+		
+		<!-- START CONTENT -->
+		<div class="main_mid" >		
+		
+			<div class="page">
+				<div class="page_top">
+					<h1>Payment</h1>
+					<div class="btns" >
+						<a href="payment_review.html" >Back</a>
+					</div>
+					<div class="clearfix" ></div>
+				</div>
+
+				<div class="page_cont">
+					<div class="InputFrm" >
+						<form action="" method="post" >
+							<div class="row">
+								<div class="col-md-4">
+									<div class="frmRow">
+										<div class="title" >Pay Charges</div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >Name</div>
+										<div class="page_cont_sel">						
+										<div class="page_cont_sel_bx">
+											<select align="left" id="frm_name" name="frm_name" style="width:340px">
+												<option value="Arya Jayadev K M">Arya Jayadev K M</option>
+												<option value="Amritha Jayadev K M">Amritha Jayadev K M</option>
+												<option value="Jayadevan V">Jayadevan V</option>
+												<option value="Sreedevi Varma">Sreedevi Varma</option>
+												<option value="RVK Thampuran">RVK Thampuran</option>
+												<option value="Soudamini Varma">Soudamini Varma</option>
+											</select>										
+										</div>	
+									</div>
+									</div>
+									<br></br>
+									<div class="frmRow">
+										<div class="lab" ><br>Flat no.</br></div>
+										<div class="val" >
+											<input type="text" class="required" id="frm_flatno" name="frm_flatno" value=""/>
+										</div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >Purpose</div>
+									<div class="page_cont_sel">						
+										<div class="page_cont_sel_bx">							
+											<select align="left" id="frm_purpose" name="frm_purpose" style="width:340px">
+												<option value="maintenance charge">Maintenance charge</option>
+												<option value="corpus charge">Corpus charge</option>
+											</select>
+										</div>	
+									</div>
+									</div>
+									
+									<div class="frmRow">
+										<div class="lab" >Month</div>
+									<div class="page_cont_sel">						
+										<div class="page_cont_sel_bx">							
+											<select align="left" id="frm_month" name="frm_month" style="width:340px">
+												<option value="January">January</option>
+												<option value="February">February</option>
+												<option value="March">March</option>
+												<option value="April">April</option>
+												<option value="May">May</option>
+												<option value="June">June</option>
+												<option value="July">July</option>
+												<option value="August">August</option>
+												<option value="September">September</option>
+												<option value="October">October</option>
+												<option value="November">November</option>
+												<option value="December">December</option>
+											</select>
+										</div>	
+									</div>
+									</div>
+									
+									<div class="frmRow">
+										<div class="lab" >Year</div>
+									<div class="page_cont_sel">						
+										<div class="page_cont_sel_bx">							
+											<select align="left" id="frm_year" name="frm_year" style="width:340px">
+												<option value="2018">2018</option>
+												<option value="2019">2019</option>
+												<option value="2020">2020</option>
+												<option value="2021">2021</option>
+												<option value="2022">2022</option>	
+											</select>
+										</div>	
+									</div>
+									</div>
+								</div>
+							<div class="col-md-4">
+								<div class="frmRow">
+									<div class="title" >Details</div>
+								</div>
+										<div class="frmRow">
+										<div class="lab" >Mode of payment</div>
+									<div class="page_cont_sel">						
+										<div class="page_cont_sel_bx">							
+											<select align="left" id="frm_payment_method" name="frm_payment_method" style="width:340px">
+												<option value="cash">Cash</option>
+												<option value="netbanking">Netbanking</option>
+												<option value="cheque">Cheque</option>
+												<option value="DD">DD</option>
+											</select>
+										</div>	
+									</div>
+									</div>
+									<br></br>
+									<div class="frmRow">
+										<div class="lab" ><br>Payment Reference</br></div>
+										<div class="val" >
+											<input type="text" class="required" id="frm_pay_ref" name="frm_pay_ref" value="" />
+										</div>
+									</div>
+									<div class="frmRow">
+										<div class="lab" >Amount</div>
+										
+										<div class="val" >
+											<input type="text" class="required" id="frm_amt" name="frm_amt" value="" />
+										</div>
+									</div>
+									
+							</div>
+							</div>	
+							<div class="clearfix"></div>
+							<button type="submit" class="btn btn-save" name="frm_save" id="frm_save">Save</button>
+						</form>
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+		<!-- END CONTENT -->
+		
+	<!-- START FOOTER -->
+	<div class="clearfix" ></div>
+</div>
+<div class="clearfix" ></div>
+<div class="main_footer">
+	<div class="copy" >
+		<p>Copyright &copy; 2019 AMCM</p>
+	</div>
+</div>
+<script type="text/javascript" >
+$('#frm_save').click(function(){
+		var err = false;
+		var frm_name = $('#frm_usn').val();
+		var frm_flatno = $('#frm_password').val();
+		var frm_purpose = $('#frm_purpose').val();
+		var frm_payment_method = $('#frm_payment_method').val(); 
+		var frm_pay_ref = $('#frm_pay_ref').val();
+		var frm_amt = $('#frm_amt').val();
+		var frm_year = $('#frm_year').val();
+		var frm_month = $('#frm_month').val();
+		$('.frm_err').hide();
+		
+		var arr=['frm_name','frm_flatno','frm_flatno', 'frm_purpose', 'frm_payment_method', 'frm_pay_ref', 'frm_amt', 'frm_year', 'frm_month' ];
+		var i,j=0;
+		for(i=0;i<9;i++)
+		{
+		if (arr[i]=='')
+			{
+			var item='#' + arr[i];
+			$(item).next('.frm_err').show();
+			$(item).focus;
+			j++;
+			}
+		}
+		
+		if(j>0)
+			return false;
+		else
+		{
+			$('#frm_save').text('Please wait...');
+			$.ajax({
+			url: '/payment',
+			data: $('form').serialize(),
+			success: function(response){
+				console.log(response);
+			},
+			error: function(error){
+				console.log(error);
+			}
+		});
+			return true;
+		}
+	});
+	
+</script>
+</body>
+</html>
+<!-- END FOOTER -->
